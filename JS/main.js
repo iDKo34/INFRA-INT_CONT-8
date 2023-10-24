@@ -1,7 +1,7 @@
 // main.js
 
 // Ajoutez vos images ici (remplacez les noms de fichier par les vôtres)
-const images = ['IMG/pasta1.jpg', 'IMG/pasta2.jpg', 'IMG/pasta3.jpg', 'IMG/pasta4.jpg', 'IMG/pasta5.jpg', 'IMG/pasta6.jpg', 'IMG/pasta7.jpg'];
+const images = ['IMG/pasta1.jpg', 'IMG/pasta2.jpg', 'IMG/pasta3.jpg', 'IMG/pasta4.jpg', 'IMG/pasta5.jpg', 'IMG/pasta6.jpg', 'IMG/pasta7.jpg', 'IMG/pasta8.jpg'];
 
 // Sélectionnez le conteneur du carousel
 const carouselContainer = document.getElementById('carousel');
