@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script defer src="JS/menu.js"></script>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/Products.css">
+    <script defer src="../JS/menu.js"></script>
     <title>Spaghetti - Pasta Shop</title>
 </head>
 <body>
     <header>
         <h1>Welcome to Pasta Shop</h1>
-        <img src="IMG/pasta_banner.jpg" alt="Pasta Banner">
+        <img src="../IMG/pasta_banner.jpg" alt="Pasta Banner">
    
-         <nav id="main-menu">
+        <nav id="main-menu">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li>
@@ -21,6 +22,7 @@
                         <li><a href="./spaghetti.html">Spaghetti</a></li>
                         <li><a href="./penne.html">Penne</a></li>
                         <li><a href="./fusilli.html">Fusilli</a></li>
+                        <li><a href="./pate-fraiche.html">Pâtes Fraîches Maison</a></li>
                     </ul>
                 </li>
                 <li><a href="cart.html">Cart</a></li>
@@ -28,11 +30,35 @@
         </nav>
     </header>
     
-    <section id="product-details">
+    <!-- <section id="product-details">
         <img src="IMG/pasta6.jpg" alt="Spaghetti Image">
         <p>Spaghetti is a long, thin, solid, cylindrical noodle pasta.</p>
         <p>It is a staple food of traditional Italian cuisine.</p>
+    </section> -->
+    <section id="product">
+        <div class="product-image">
+            <img src="../IMG/pasta6.jpg" alt="Spaghetti Image">
+        </div>
+        <div class="product-details">
+            <h2>Pâtes Spaghetti</h2>
+            <p>Des pâtes préparées quotidiennement avec des ingrédients de première qualité.</p>
+            <p>Prix : 4,99 € / paquet</p>
+            <label for="quantity">Quantité : </label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <button type="button">Ajouter au panier</button>
+        </div>
     </section>
+
+    <section id="description">
+        <h2>Description du Produit</h2>
+        <p>Ces pâtes fraîches sont un délice pour les amateurs de cuisine italienne. Préparées à la main avec une texture parfaite, elles sont idéales pour accompagner vos sauces préférées. Chaque paquet contient 500g de pâtes.</p>
+    </section>
+
+    <section id="reviews">
+        <h2>Avis des Clients</h2>
+        <!-- Ajoutez ici des avis de clients, le cas échéant -->
+    </section>
+
 
     <footer>
         <p>&copy; 2023 Pasta Shop</p>
