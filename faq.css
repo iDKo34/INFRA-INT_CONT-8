@@ -14,6 +14,24 @@ header {
     font-family: 'Helvetica', sans-serif;
 }
 
+/* Style spécifique pour l'élément auquel vous souhaitez ajouter l'arrière-plan */
+.element-avec-fond {
+    background-color: #FFFFFF; /* Couleur de fond */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    
+    /* Image de fond à droite */
+    background-image: url('https://mapetiteassiette.com/wp-content/uploads/2020/09/oeuf-e1601281477516-800x599.jpg');
+    background-repeat: no-repeat;
+    background-position: right top; /* Position à droite en haut */
+    
+    /* Image de fond à gauche */
+    background-image: url('https://happypanier.fr/wp-content/uploads/2020/04/AdobeStock_247082259-scaled-e1629022500268.jpeg'), url('https://www.academiedugout.fr/images/9582/1200-auto/fotolia_59270770_subscription_xl.jpg?poix=50&poiy=50');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top; /* Position à gauche en haut, position à droite en haut */
+}
+
 /* Styles pour les questions dans la FAQ */
 #faq li h3 {
     font-weight: bold;
