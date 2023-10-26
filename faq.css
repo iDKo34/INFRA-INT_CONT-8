@@ -1,0 +1,35 @@
+/* Styles spécifiques à l'en-tête */
+header {
+    background-color: #FFD700; /* Couleur or */
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Styles spécifiques à la section FAQ */
+#faq {
+    background-color: #FFF; /* Couleur blanche */
+    padding: 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Styles pour les questions dans la FAQ */
+#faq li h3 {
+    font-weight: bold;
+    color: #FF6347; /* Couleur rouge-rouille */
+}
+
+/* Styles pour les réponses dans la FAQ */
+#faq li p {
+    color: #333;
+}
+
+/* Styles du pied de page */
+footer {
+    background-color: #FFD700; /* Couleur or */
+    text-align: center;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
