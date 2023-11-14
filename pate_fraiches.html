@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-    <script defer src="JS/main.js"></script>
-    <script defer src="JS/menu.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <title>Home - Pasta Shop</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script defer src="./JS/menu.js"></script>
+    <title>Pâtes Fraîches - Pasta Shop</title>
 </head>
 
 
@@ -18,7 +13,7 @@
 <body>
     <header>
         <h1>Welcome to Pasta Shop</h1>
-        <img src="IMG/pasta_banner.jpg" alt="Pasta Banner">
+        <img src="./IMG/pasta_banner.jpg" alt="Pasta Banner">
    
          <nav id="main-menu">
             <ul>
@@ -33,19 +28,22 @@
                     </ul>
                 </li>
                 <li><a href="cart.html">Cart</a></li>
-                <li><a href="client.html">Espace Client</a></li>
+                <li><a href="./client.html">Espace Client</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="featured-products">
-        <div id="carousel" class="owl-carousel owl-theme"></div>
+    <section id="product-list">
+        <a href="./Products/pate-fraiche.html" class="product-item">
+            <img src="./img/pasta9.jpg" alt="Pâtes Fraîches Maison Image">
+            <h2>Pâtes Fraîches Maison</h2>
+            <p>Des pâtes fraîches préparées quotidiennement avec des ingrédients de première qualité</p>
+            <p>Prix : 5,99 € / paquet</p>
+        </a>
+        
     </section>
-    
-       
 
     <footer>
         <p>&copy; 2023 Pasta Shop</p>
     </footer>
 </body>
-</html>
