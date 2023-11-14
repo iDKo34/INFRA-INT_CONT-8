@@ -123,3 +123,9 @@ footer {
     height: auto;
     margin-bottom: 10px;
 }
+
+
+.header-right {
+    /* Pour placer la div à droite */
+    margin-left: auto;
+}
