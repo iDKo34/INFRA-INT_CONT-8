@@ -1,10 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Déplacez la déclaration de usersDatabase à l'extérieur de la fonction checkLogin
+    const usersDatabase = [
+        {
+            id: 1,
+            firstName: 'John',
+            lastName: 'Doe',
+            username: 'john_doe',
+            password: 'motdepasse1',
+            profileImage: 'path/to/image1.jpg',
+            orders: [
+                { orderId: 101, date: '2023-11-01', items: ['Spaghetti', 'Penne'] },
+                { orderId: 102, date: '2023-11-05', items: ['Fusilli'] }
+            ]
+        },
+        {
+            id: 2,
+            firstName: 'Jane',
+            lastName: 'Smith',
+            username: 'jane_smith',
+            password: 'motdepasse2',
+            profileImage: 'path/to/image2.jpg',
+            orders: [
+                { orderId: 103, date: '2023-11-02', items: ['Penne', 'Fusilli'] }
+            ]
+        }
+    ];
+
     function checkLogin() {
         const username = document.getElementById('login-box-username').value;
         const password = document.getElementById('login-box-password').value;
 
-        // Remplacez ceci par la logique de vérification dans votre fichier client.js
-        const userExists = checkUserExists(username, password);
+        // Utilisez la variable usersDatabase définie à l'extérieur de cette fonction
+        const userExists = checkUserExists(username, password, usersDatabase);
 
         if (userExists) {
             // Affichez le message de connexion réussie
@@ -19,14 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function checkUserExists(username, password) {
-        // Vous devez implémenter la logique pour vérifier si l'utilisateur existe
-        // en comparant le nom d'utilisateur et le mot de passe dans le fichier client.js
-
-        // Dans votre cas, vous pouvez itérer sur le tableau des utilisateurs
-        // et vérifier si le nom d'utilisateur et le mot de passe correspondent à un utilisateur
-
-        // Voici un exemple simple (à améliorer pour une application réelle) :
+    function checkUserExists(username, password, usersDatabase) {
+        // Utilisez la variable usersDatabase fournie en paramètre
         for (const user of usersDatabase) {
             if (user.username === username && user.password === password) {
                 return true;

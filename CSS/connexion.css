@@ -14,15 +14,18 @@ body {
     width: 300px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto; /* Ajout de cette ligne pour centrer le conteneur */
+    text-align: center; /* Pour centrer le texte */
 }
 
 .login-box {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    text-align: center; /* Pour centrer le texte */
 }
 
 #login-button {
