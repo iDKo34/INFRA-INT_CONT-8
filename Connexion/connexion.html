@@ -1,65 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        #login-container {
-            background-color: #ffffff;
-            border-radius: 5px;
-            width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        #login-box {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        #login-button {
-            background-color: #0074d9;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #forgot-password {
-            margin-top: 10px;
-            text-decoration: none;
-            color: #0074d9;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/connexion.css">
 </head>
 <body>
 
 <div id="login-container">
     <h1>Connexion</h1>
-    <form action="traitement_connexion.php" method="POST">
-        <input type="text" id="login-box" name="username" placeholder="Nom d'utilisateur" required>
+    <form>
+        <input type="text" class="login-box" id="login-box-username" placeholder="Nom d'utilisateur" required>
         <br>
-        <input type="password" id="login-box" name="password" placeholder="Mot de passe" required>
+        <input type="password" class="login-box" id="login-box-password" placeholder="Mot de passe" required>
         <br>
-        <button id="login-button" type="submit">Se connecter</button>
+        <button id="login-button" type="button" onclick="checkLogin()">Se connecter</button>
     </form>
     <a id="forgot-password" href="mot_de_passe_oublie.php">Mot de passe oublié</a>
+
+    <!-- Ajout de l'élément pour afficher le message de connexion réussie -->
+    <p id="login-success-message"></p>
 </div>
 
+<script src="JS/connexion.js"></script>
 </body>
 </html>
