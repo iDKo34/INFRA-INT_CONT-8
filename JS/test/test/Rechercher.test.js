@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-/* const { rechercher } = require('../../Rechercher'); */
+ const { rechercher } = require('../Rechercher');
 
 describe('Fonction rechercher', () => {
     it('devrait retourner des résultats corrects pour des mots-clés spécifiques', () => {
