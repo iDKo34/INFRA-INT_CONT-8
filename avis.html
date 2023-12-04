@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avis des Clients</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="avis-container">
+    <h1>Avis des Clients</h1>
+
+    <form id="form-avis">
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" required>
+      <br>
+      <label for="commentaire">Commentaire:</label>
+      <textarea id="commentaire" name="commentaire" required></textarea>
+      <br>
+      <button type="button" id="ajouterAvisBtn">Ajouter un Avis</button>
+    </form>
+
+    <div id="avis-liste">
+      <!-- Les avis des clients seront affichés ici -->
+    </div>
+  </div>
+
+  <script src="avis.js"></script>
+</body>
+</html>
