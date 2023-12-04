@@ -12,12 +12,23 @@
     <h1>Avis des Clients</h1>
 
     <form id="form-avis">
-      <label for="nom">Nom:</label>
+      <label for="nom">Nom/Prénom:</label>
       <input type="text" id="nom" name="nom" required>
       <br>
-      <label for="commentaire">Commentaire:</label>
-      <textarea id="commentaire" name="commentaire" required></textarea>
+
+      <label for="avis">Avis:</label>
+      <textarea id="avis" name="avis" required></textarea>
       <br>
+
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="mail" required>
+      <br>
+
+      <label for="notation">Notation (de 1 à 5 étoiles):</label>
+      <div id="notation" class="notation">
+        <!-- Les étoiles seront ajoutées ici -->
+      </div>
+      
       <button type="button" id="ajouterAvisBtn">Ajouter un Avis</button>
     </form>
 
