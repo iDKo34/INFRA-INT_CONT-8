@@ -1,6 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
+
  const { rechercher } = require('../src/Rechercher.js');
 
 describe('Fonction rechercher', () => {
