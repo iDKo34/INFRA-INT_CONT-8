@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avis des Clients</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Avis sur notre Produit</title>
+  <link rel="avissheet" href="avis.css">
 </head>
 <body>
 
   <div class="avis-container">
-    <h1>Avis des Clients</h1>
+    <h1>Avis sur notre Produit</h1>
 
     <form id="form-avis">
       <label for="nom">Nom/Prénom:</label>
       <input type="text" id="nom" name="nom" required>
       <br>
 
-      <label for="avis">Avis:</label>
-      <textarea id="avis" name="avis" required></textarea>
-      <br>
-
       <label for="mail">E-mail:</label>
       <input type="email" id="mail" name="mail" required>
       <br>
 
-      <label for="notation">Notation (de 1 à 5 étoiles):</label>
-      <div id="notation" class="notation">
-        <!-- Les étoiles seront ajoutées ici -->
-      </div>
-      
+      <label for="commentaire">Commentaire:</label>
+      <textarea id="commentaire" name="commentaire" required></textarea>
+      <br>
+
+      <label for="note">Note (de 1 à 5):</label>
+      <input type="number" id="note" name="note" min="1" max="5" required>
+      <br>
+
       <button type="button" id="ajouterAvisBtn">Ajouter un Avis</button>
     </form>
 

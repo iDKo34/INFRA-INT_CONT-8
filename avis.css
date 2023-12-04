@@ -2,20 +2,23 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-image: url('https://fr.freepik.com/photos/pates'); /* Remplacez 'background.jpg' par le chemin de votre image de fond */
+  background-size: cover;
+  background-position: center;
+  color: #34918c;
 }
 
 .avis-container {
   max-width: 800px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
 }
 
 h1 {
-  color: #333;
+  color: #ffcc00;
   text-align: center;
 }
 
@@ -26,7 +29,6 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
 }
 
 input,
@@ -35,18 +37,8 @@ textarea {
   padding: 8px;
   margin-bottom: 10px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(87, 10, 10)ccc;
   border-radius: 4px;
-}
-
-.notation {
-  margin-bottom: 10px;
-}
-
-.notation span {
-  font-size: 24px;
-  color: #ffcc00;
-  cursor: pointer;
 }
 
 button {
