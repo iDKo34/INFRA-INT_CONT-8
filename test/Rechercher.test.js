@@ -33,7 +33,7 @@ describe('Fonction rechercher', () => {
         ];
        
         // Appel de la fonction de recherche
-        const resultatsRecherche = rechercher(produitsDatabase, 'penne');
+        const resultatsRecherche = rechercher(produitsDatabase, 'tagliatelle');
 
         // Vérifiez que le résultat affiché est conforme à votre attente
         expect(resultatsRecherche).to.have.lengthOf(0);
