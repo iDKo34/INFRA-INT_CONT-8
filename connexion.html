@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="CSS/connexion.css">
+    <link rel="stylesheet" href="./CSS/connexion.css">
+    <title>Login Page</title>
 </head>
 <body>
+    <div class="container">
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-<div id="login-container">
-    <h1>Connexion</h1>
-    <form>
-        <input type="text" class="login-box" id="login-box-username" placeholder="Nom d'utilisateur" required>
-        <br>
-        <input type="password" class="login-box" id="login-box-password" placeholder="Mot de passe" required>
-        <br>
-        <button id="login-button" type="button" onclick="checkLogin()">Se connecter</button>
-    </form>
-    <a id="forgot-password" href="mot_de_passe_oublie.html">Mot de passe oublié</a>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-    <!-- Ajout de l'élément pour afficher le message de connexion réussie -->
-    <p id="login-success-message"></p>
-</div>
+            <button type="button" onclick="login()">Login</button>
 
-<script src="JS/client.js"></script>
-<script src="JS/connexion.js"></script>
+            <p id="errorMessage" class="error-message"></p>
+            <p id="successMessage" class="success-message"></p>
+        </form>
+    </div>
+
+    <script src="./JS/connexion.js"></script>
 </body>
 </html>

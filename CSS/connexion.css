@@ -1,54 +1,48 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-#login-container {
-    background-color: #ffffff;
-    border-radius: 5px;
-    width: 300px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: auto; /* Ajout de cette ligne pour centrer le conteneur */
-    text-align: center; /* Pour centrer le texte */
-}
-
-.login-box {
-    width: 100%;
-    padding: 10px 0;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: center; /* Pour centrer le texte */
-}
-
-#login-button {
-    background-color: #0074d9;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#forgot-password {
-    margin-top: 10px;
-    text-decoration: none;
-    color: #0074d9;
-    display: block;
-    text-align: right;
-}
-
-#login-success-message {
-    color: green;
-    font-weight: bold;
-    margin-top: 10px;
+.container {
     text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
 }
