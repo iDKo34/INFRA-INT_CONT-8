@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./CSS/client.css">
     <link rel="stylesheet" href="./CSS/styles.css">
     <script defer src="./JS/menu.js"></script>
+    <script defer src="JS/Rechercher.js"></script>
     <title>Espace Client</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li>
-                    <a href="#">Products</a>
+                    <a href="./category.html">Products</a>
                     <ul>
                         <li><a href="Products/spaghetti.html">Spaghetti</a></li>
                         <li><a href="Products/penne.html">Penne</a></li>
@@ -27,8 +28,13 @@
                 </li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="client.html">Espace Client</a></li>
+                <li><a href="./Recherche/recherche.html">Rechercher un produits</a></li>
             </ul>
         </nav>
+        <div class="header-right">
+            <input type="text" id="search-input" placeholder="Rechercher des pâtes...">
+            <button type="button" id="search-button">Search</button>
+        </div>
     </header>
     <main>
         <section class="profile">
