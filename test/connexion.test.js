@@ -1,29 +1,16 @@
-// Installez Chai si vous ne l'avez pas déjà fait
-// npm install chai --save-dev
-
 const { assert } = require('chai');
 const { login, users } = require('../JS/connexion');
 
 describe('Login Function', function () {
-  it('should return success message for valid credentials (John Doe)', function () {
-    const errorMessageElement = { textContent: "" };
-    const successMessageElement = { textContent: "" };
+    it('should return success for valid credentials', function () {
+        const result = login('john_doe', 'password123');
+        assert.isTrue(result.success, 'Login should be successful');
+        assert.strictEqual(result.message, 'Welcome, John Doe!', 'Success message incorrect');
+    });
 
-    // Appeler la fonction login avec les identifiants de John Doe
-    login('john_doe', 'password123', errorMessageElement, successMessageElement);
-
-    // Vérifier que le message de succès est correct
-    assert.strictEqual(successMessageElement.textContent, 'Welcome, John Doe!');
-  });
-
-  it('should return error message for invalid credentials (Test Test)', function () {
-    const errorMessageElement = { textContent: "" };
-    const successMessageElement = { textContent: "" };
-
-    // Appeler la fonction login avec des identifiants incorrects
-    login('test', 'test', errorMessageElement, successMessageElement);
-
-    // Vérifier que le message d'erreur est correct
-    assert.strictEqual(errorMessageElement.textContent, 'Invalid username or password. Please try again.');
-  });
+    it('should return failure for invalid credentials', function () {
+        const result = login('invalid_user', 'invalid_password');
+        assert.isFalse(result.success, 'Login should fail');
+        assert.strictEqual(result.message, 'Invalid username or password. Please try again.', 'Error message incorrect');
+    });
 });
