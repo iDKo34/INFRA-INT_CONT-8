@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Mon Panier</title>
+</head>
+<body>
+    <div id="cart">
+        <h2>Mon Panier</h2>
+        <ul id="item-list">
+            <!-- Les produits seront ajoutés ici dynamiquement -->
+        </ul>
+        <div id="total">
+            Total : <span id="cart-total">0</span> €
+        </div>
+    </div>
+
+    <script>
+        // Tableau pour stocker les produits dans le panier
+        const cart = [];
+
+        // Fonction pour afficher les produits dans le panier
+        function renderCart() {
+            const itemList = document.getElementById("item-list");
+            const cartTotal = document.getElementById("cart-total");
+
+            itemList.innerHTML = "";
+            let total = 0;
+
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.classList.add("item");
+                const subtotal = item.price * item.quantity;
+                listItem.innerHTML = `
+                    <span>${item.name} - ${item.price} € x 
+                    <select data-id="${item.id}" class="quantity-select">
+                        ${generateQuantityOptions(item.id, item.quantity)}
+                    </select> = ${subtotal} €</span>
+                    <button data-id="${item.id}">Supprimer</button>
+                `;
+
+                total += subtotal;
+                itemList.appendChild(listItem);
+            });
+
+            cartTotal.textContent = total.toFixed(2) + " €";
+        }
+
+        // Fonction pour générer les options de quantité
+        function generateQuantityOptions(id, selectedQuantity) {
+            let options = '';
+            for (let i = 1; i <= 10; i++) {
+                options += `<option value="${i}" ${i === selectedQuantity ? "selected" : ""}>${i}</option>`;
+            }
+            return options;
+        }
+
+        // Fonction pour ajouter un produit au panier
+        function addToCart(id, name, price) {
+            cart.push({ id, name, price, quantity: 1 });
+            renderCart();
+        }
+
+        // Fonction pour supprimer un produit du panier
+        function removeFromCart(id) {
+            const itemIndex = cart.findIndex(item => item.id === id);
+            if (itemIndex !== -1) {
+                cart.splice(itemIndex, 1);
+                renderCart();
+            }
+        }
+
+        // Gestion des clics sur les boutons de suppression
+        document.getElementById("item-list").addEventListener("click", event => {
+            if (event.target.tagName === "BUTTON") {
+                const id = parseInt(event.target.getAttribute("data-id"));
+                removeFromCart(id);
+            }
+        });
+
+        // Gestion des changements de quantité
+        document.getElementById("item-list").addEventListener("change", event => {
+            if (event.target.classList.contains("quantity-select")) {
+                const id = parseInt(event.target.getAttribute("data-id"));
+                const quantity = parseInt(event.target.value);
+
+                const item = cart.find(item => item.id === id);
+                if (item) {
+                    item.quantity = quantity;
+                    renderCart();
+                }
+            }
+        });
+
+        // Exemple d'ajout de produits
+        addToCart(1, "Produit 1", 10.00);
+        addToCart(2, "Produit 2", 15.00);
+        addToCart(3, "Produit 3", 20.00);
+    </script>
+</body>
+</html>

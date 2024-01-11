@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/client.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script defer src="./JS/menu.js"></script>
+    <script src="./JS/client.js" defer></script> <!-- Ajout du lien vers le fichier JavaScript -->
+    <script defer src="JS/Rechercher.js"></script>
+    <title>Espace Client</title>
+</head>
+
+<body>
+    <header>
+        <h1>Espace Client</h1>
+        <img src="IMG/pasta_banner.jpg" alt="Pasta Banner">
+
+        <nav id="main-menu">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li>
+                    <a href="./category.html">Products</a>
+                    <ul>
+                        <li><a href="Products/spaghetti.html">Spaghetti</a></li>
+                        <li><a href="Products/penne.html">Penne</a></li>
+                        <li><a href="Products/fusilli.html">Fusilli</a></li>
+                        <li><a href="Products/pate-fraiche.html">Pâtes Fraîches Maison</a></li>
+                    </ul>
+                </li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="client.html">Espace Client</a></li>
+                <li><a href="./Recherche/recherche.html">Rechercher un produits</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <input type="text" id="search-input" placeholder="Rechercher des pâtes...">
+            <button type="button" id="search-button">Search</button>
+        </div>
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile-image">
+                <img id="user-profile-image" alt="Image de profil">
+                <button class="change-image-button">Changer l'image</button>
+            </div>
+            <div class="user-info">
+                <h2 id="user-last-name">Nom : </h2>
+                <h2 id="user-first-name">Prénom : </h2>
+                <button class="reset-password-button" onclick="openModal()">Réinitialiser le mot de passe</button>
+            </div>
+        </section>
+        <section class="order-history" id="order-history-section">
+            <h2>Historique des commandes</h2>
+            <!-- Insérer ici la liste des commandes passées par l'utilisateur -->
+        </section>
+    </main>
+
+    <!-- Ajout de la fenêtre contextuelle -->
+    <div id="passwordResetModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal" onclick="closeModal()">&times;</span>
+            <h2>Réinitialiser le mot de passe</h2>
+            <form id="passwordResetForm" onsubmit="resetPassword()">
+                <label for="currentPassword">Mot de passe actuel :</label>
+                <input type="password" id="currentPassword" required>
+                <label for="newPassword">Nouveau mot de passe :</label>
+                <input type="password" id="newPassword" required>
+                <label for="confirmPassword">Confirmer le nouveau mot de passe :</label>
+                <input type="password" id="confirmPassword" required>
+                <button type="submit">Réinitialiser</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
