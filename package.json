@@ -1,8 +1,25 @@
 {
+  "name": "chai-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "devDependencies": {
-    "chai": "^4.3.10"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmess/Chai-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmess/Chai-example/issues"
+  },
+  "homepage": "https://github.com/rmess/Chai-example#readme",
+  "dependencies": {
+    "chai": "^4.4.0",
+    "mocha": "^10.2.0",
+    "save-dev": "^0.0.1-security"
   }
 }

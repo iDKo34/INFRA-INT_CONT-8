@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <script defer src="../JS/menu.js"></script>
     <script defer src="../JS/Rechercher.js"></script>
+    <script defer src="../JS/resultats_recherche.js"></script>
     <title>Recherche de Pâtes</title>
     
 </head>
@@ -32,17 +33,13 @@
                 <li><a href="../Recherche/recherche.html">Rechercher un produits</a></li>
             </ul>
         </nav>
+        <div class="header-right">
+            <input type="text" id="search-input" placeholder="Rechercher des pâtes...">
+            <button type="button" id="search-button">Search</button>
+        </div>
     </header>
 
 <h1>Recherche de Pâtes</h1>
-
-<div id="search-container">
-    <!-- <input type="text" id="search-box" placeholder="Rechercher des pâtes...">
-    <button id="search-button">Rechercher</button> -->
-    <input type="text" id="search-input" placeholder="Rechercher des pâtes...">
-    <button type="button" onclick="rechercher()">Rechercher</button>
-
-</div>
 
 <div id="search-results">
     <!-- Les résultats de la recherche seront affichés ici -->

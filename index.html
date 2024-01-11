@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script defer src="JS/main.js"></script>
     <script defer src="JS/menu.js"></script>
+    <script defer src="JS/Rechercher.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <title>Home - Pasta Shop</title>
@@ -19,6 +20,7 @@
     <header>
         <h1>Welcome to Pasta Shop</h1>
         <img src="IMG/pasta_banner.jpg" alt="Pasta Banner">
+        
    
          <nav id="main-menu">
             <ul>
@@ -34,8 +36,15 @@
                 </li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="client.html">Espace Client</a></li>
+                <li><a href="./Recherche/recherche.html">Rechercher un produits</a></li>
             </ul>
         </nav>
+
+        <div class="header-right">
+            <input type="text" id="search-input" placeholder="Rechercher des pâtes...">
+            <button type="button" id="search-button">Search</button>
+        </div>
+
     </header>
 
     <section id="featured-products">
